@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프롬프트 생성기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F7F7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 50%;">
+<label for="표현 방식">표현 방식:</label>
+<select id="표현 방식">
+ <option value="Digital artwork of">Digital artwork of</option>
+ <option value="Painting of">Painting of</option>
+ <option value="Oil painting of">Oil painting of</option>
+ <option value="Watercolor painting of">Watercolor painting of</option>
+ <option value="Acrylic painting of">Acrylic painting of</option> 
+ <option value="Charcoal drawing of">Charcoal drawing of</option> 
+ <option value="Hand-drawn image of">Hand-drawn image of</option> 
+ <option value="3D render of">3D render of</option> 
+ <option value="Photo of">Photo of</option> 
+ <option value="Portrait of">Portrait of</option>
+ <option value="Sketch of">Sketch of</option> 
+ <option value="Engraving of">Engraving of</option> 
+ <option value="Lithograph of">Lithograph of</option> 
+ <option value="Collage of">Collage of</option> 
+ <option value="Mosaic of">Mosaic of</option> 
+ <option value="Ceramic sculpture of">Ceramic sculpture of</option> 
+ <option value="Wood carving of">Wood carving of</option> 
+ <option value="Marble statue of">Marble statue of</option> 
+ <option value="Fabric collage of">Fabric collage of</option> 
+ <option value="Metallic sculpture of">Metallic sculpture of</option> 
+ <option value="Ice sculpture of">Ice sculpture of</option> 
+ <option value="Sand sculpture of">Sand sculpture of</option> 
+ <option value="Paper collage of">Paper collage of</option> 
+ <option value="Plastic sculpture of">Plastic sculpture of</option> 
+ <option value="Digital painting of">Digital painting of</option> 
+ <option value="Ink drawing of">Ink drawing of</option> 
+ <option value="Pastel drawing of">Pastel drawing of</option> 
+ <option value="Canvas texture">Canvas texture</option>
+ <option value="Clay Statue">Clay Statue</option>
+ <option value="Metal Statue">Metal Statue</option>
+ <option value="Crystal figure">Crystal figure</option>
+ <option value="Fiber optic">Fiber optic</option>
+ <option value="Layered paper">Layered paper</option></select>
+
+<label for="조명">조명:</label>
+<select id="조명">
+<option value="Ambient lighting">Ambient lighting</option>
+ <option value="Backlighting">Backlighting</option>
+ <option value="Candlelight">Candlelight</option>
+ <option value="Chiaroscuro lighting">Chiaroscuro lighting</option>
+ <option value="Cinematic lighting">Cinematic lighting</option>
+ <option value="Direct sunlight">Direct sunlight</option>
+ <option value="Dusk lighting">Dusk lighting</option>
+ <option value="Fill light">Fill light</option>
+ <option value="Fluorescent lighting">Fluorescent lighting</option>
+ <option value="High key light">High key light</option>
+ <option value="Low key light">Low key light</option>
+ <option value="Moonlight">Moonlight</option>
+ <option value="Natural light">Natural light</option>
+ <option value="Neon lighting">Neon lighting</option>
+ <option value="Spotlight">Spotlight</option>
+ <option value="Strobe lighting">Strobe lighting</option>
+ <option value="Studio lights">Studio lights</option>
+ <option value="Sunlight">Sunlight</option>
+ <option value="Warm lighting">Warm lighting</option>
+ <option value="Accent lighting">Accent lighting</option>
+ <option value="Soft lighting">Soft lighting</option>
+ <option value="Silhouetted lighting">Silhouetted lighting</option>
+ <option value="Ring light">Ring light</option>
+ <option value="Golden hour glow">Golden hour glow</option>
+ <option value="Sun-dappled light">un-dappled light</option>
+ <option value="Diffused lighting">Diffused lighting</option>
+ <option value="Under a canopy of stars">Under a canopy of stars</option>
+ <option value="Twilight illumination">Twilight illumination</option>
+ <option value="Lantern-lighting">Lantern-lighting</option>
+ <option value="Glowing embers">Glowing embers</option>
+ <option value="Harsh midday sun">Harsh midday sun</option>
+ <option value="Shadowed by clouds">Shadowed by clouds</option>
+ <option value="Colorful lighting">Colorful lighting</option>
+ <option value="Flashlight lighting">Flashlight lighting</option>
+</select>
+
+<label for="관점">관점:</label>
+<select id="관점">
+ <option value="Aerial view">Aerial view</option>
+ <option value="Bird view">Bird view</option>
+ <option value="Bokeh">Bokeh</option>
+ <option value="Close up shot">Close up shot</option>
+ <option value="Drone shot">Drone shot</option>
+ <option value="Extreme close-up">xtreme close-up</option>
+ <option value="Extreme long shot">Extreme long shot</option>
+ <option value="Front view">Front view</option>
+ <option value="Full shot">Full shot</option>
+ <option value="Headshot">eadshot</option>
+ <option value="Long shot">Long shot</option>
+ <option value="Low angle">Low angle</option>
+ <option value="Macro lens">Macro lens</option>
+ <option value="Medium shot">Medium shot</option>
+ <option value="Overhead view">Overhead view</option>
+ <option value="Panorama">Panorama</option>
+ <option value="Portrait">Portrait</option>
+ <option value="Side view">Side view</option>
+ <option value="Wide angle lens">Wide angle lens</option>
+ <option value="Low shutter effect">Low shutter effect</option>
+ <option value="Telephoto lens">Telephoto lens</option>
+ <option value="POV shot">POV shot</option>
+ <option value="360 panorama">360 panorama</option>
+ <option value="50mm lens">50mm lens</option>
+ <option value="DSLR">DSLR</option>
+ <option value="Over the shoulder shot">Over the shoulder shot</option>
+ <option value="Product shot">Product shot</option>
+ <option value="Waist shot">Waist shot</option>
+ <option value="Knee shot">Knee shot</option>
+ <option value="Fish-eye lens">Fish-eye lens</option>
+ <option value="Magnification">Magnification</option>
+ <option value="Fast shutter speed">Fast shutter speed</option>
+ <option value="Ultra wide angle lens">Ultra wide angle lens</option>
+ <option value="Bust shot">Bust shot</option>
+</select>
+<label for="스타일">스타일</label>
+<select id="스타일">
+<option value="Abstract art">Abstract art</option>
+ <option value="Watercolor">Watercolor</option>
+ <option value="Illustration">Illustration</option>
+ <option value="Oil painting">Oil painting</option>
+ <option value="Photorealistic">Photorealistic</option>
+ <option value="Sketch drawing">Sketch drawing</option>
+ <option value="Cartoon style">Cartoon style</option>
+ <option value="Pop art">Pop art</option>
+ <option value="Art Nouveau Style">Art Nouveau Style</option>
+ <option value="3D modeling">3D modeling</option>
+ <option value="Vintage photography">Vintage photography</option>
+ <option value="Impasto technique">Impasto technique</option>
+ <option value="Still life drawing">Still life drawing</option>
+ <option value="Fractal art">Fractal art</option>
+ <option value="Cubism">Cubism</option>
+ <option value="Impressionism">Impressionism</option>
+ <option value="Surrealism">Surrealism</option>
+ <option value="Baroque">Baroque</option>
+ <option value="Fauvism">Fauvism</option>
+ <option value="Pointillism">Pointillism</option>
+ <option value="Street Art">Street Art</option>
+ <option value="Anime-inspired characters">Anime-inspired characters</option>
+ <option value="2D game art">2D game art</option>
+ <option value="Digital painting">Digital painting</option>
+ <option value="Pixel Art">Pixel Art</option>
+ <option value="Manga Character illustration">Manga Character illustration</option>
+ <option value="Cyberpunk">Cyberpunk</option>
+ <option value="Gothic">Gothic</option>
+ <option value="Art deco">Art deco</option>
+ <option value="Bauhaus">Bauhaus</option>
+ <option value="Hand-drawn animation">Hand-drawn animation</option>
+ <option value="Comic art">Comic art</option>
+ <option value="Ukiyo-e">Ukiyo-e</option>
+ <option value="Pop kei">Pop kei</option></select>
+
+<label for="색상">색상</label>
+<select id="색상">
+ <option value="Vibrant colors">Vibrant colors</option>
+ <option value="Pastel colors">Pastel colors</option>
+ <option value="Black and white">Black and white</option>
+ <option value="Monochromatic hues">Monochromatic hues</option>
+ <option value="Warm, earthy colors">Warm, earthy colors</option>
+ <option value="Cool undertones">Cool undertones</option>
+ <option value="Grayscale">Grayscale</option>
+ <option value="Muted tones">Muted tones</option>
+ <option value="Splash of neon">Splash of neon</option>
+ <option value="Sun-kissed hues">Sun-kissed hues</option>
+ <option value="Jewel tones">Jewel tones</option>
+ <option value="Dreamy palette">Dreamy palette</option>
+ <option value="Desaturated tones">Desaturated tones</option>
+ <option value="Vintage color grading">Vintage color grading</option>
+ <option value="Duotone">Duotone</option>
+ <option value="Metallic sheen">Metallic sheen</option>
+ <option value="High contrast">High contrast</option>
+ <option value="Natural colors">Natural colors</option>
+ <option value="Contrasting colors">Contrasting colors</option>
+ <option value="Colorful gradient">Colorful gradient</option>
+ <option value="Dark tones">Dark tones</option>
+ <option value="Bright colors">Bright colors</option>
+ <option value="Rich, deep colors">Rich, deep colors</option>
+ <option value="Soft pastel">Soft pastel</option>
+ <option value="Golden yellow">Golden yellow</option>
+ <option value="Neon green">Neon green</option>
+ <option value="Royal blue">Royal blue</option>
+ <option value="Scarlet red">Scarlet red</option>
+ <option value="Olive green">Olive green</option>
+ <option value="Turquoise blue">Turquoise blue</option>
+ <option value="Charcoal gray">Charcoal gray</option>
+ <option value="Coral pink">Coral pink</option>
+ <option value="Emerald green">Emerald green</option>
+ <option value="Lavender purple">Lavender purple</option></select>
+
+        <label for="topic">이미지 주제:</label>
+        <input type="text" id="topic">
+        <button id="generateButton">생성</button>
+        <label for="output">출력:</label>
+        <textarea id="output" readonly></textarea>
+        <button id="copyButton">클립보드에 복사</button>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("generateButton").addEventListener("click", function() {
+            const topic = document.getElementById("topic").value;
+            const values = [];
+values.push(document.getElementById("표현 방식").value);values.push(document.getElementById("스타일").value);values.push(document.getElementById("조명").value);values.push(document.getElementById("관점").value);values.push(document.getElementById("색상").value);
+            const output = topic + ', ' + values.join(', ');
+            document.getElementById('output').value = output;
+        });
+
+        document.getElementById("copyButton").addEventListener("click", function() {
+            const outputTextarea = document.getElementById('output');
+            outputTextarea.select();
+            document.execCommand('copy');
+        });
+    </script>
+</body>
+</html>
